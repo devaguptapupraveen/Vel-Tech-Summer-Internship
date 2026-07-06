@@ -1,0 +1,21 @@
+# Environment
+.env
+*.env
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Database
+*.db
+
+# Logs
+logs/
+
+# Generated websites
+generated/
+published/
+
+# Zip exports
+*.zip

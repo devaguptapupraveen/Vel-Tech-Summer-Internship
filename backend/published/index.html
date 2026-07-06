@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lactalux Dairy - Fresh Milk & Premium Dairy Delivered Daily</title>
+    <meta name="description" content="Discover Lactalux Dairy's premium selection of farm-fresh milk, organic dairy, and artisan products. Enjoy convenient home delivery and subscriptions for purity and taste.">
+    <meta name="keywords" content="fresh milk, dairy delivery, organic milk, local dairy, premium milk, artisan yogurt, butter, cheese, milk subscription, home delivery dairy, Lactalux">
+    <link rel="canonical" href="https://www.lactalux.com/">
+    <meta property="og:title" content="Lactalux Dairy - Fresh Milk & Premium Dairy Delivered Daily">
+    <meta property="og:description" content="Discover Lactalux Dairy's premium selection of farm-fresh milk, organic dairy, and artisan products. Enjoy convenient home delivery and subscriptions for purity and taste.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/ADD8E6/FFFFFF?text=Lactalux+Dairy">
+    <meta property="og:url" content="https://www.lactalux.com/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lactalux Dairy - Fresh Milk & Premium Dairy Delivered Daily">
+    <meta name="twitter:description" content="Discover Lactalux Dairy's premium selection of farm-fresh milk, organic dairy, and artisan products. Enjoy convenient home delivery and subscriptions for purity and taste.">
+    <meta name="twitter:image" content="https://via.placeholder.com/1200x630/ADD8E6/FFFFFF?text=Lactalux+Dairy">
+    <meta name="robots" content="index, follow">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        :root {
+            --primary-light-blue: hsl(200, 70%, 85%);
+            --primary-green: hsl(120, 30%, 85%);
+            --accent-deep-green: hsl(120, 40%, 40%);
+            --text-dark-gray: #333333;
+            --text-light-gray: #555555;
+            --bg-cream: #FDFDFD;
+            --bg-light-blue: hsl(200, 70%, 95%);
+            --bg-light-green: hsl(120, 30%, 95%);
+            --shadow-light: rgba(0, 0, 0, 0.05);
+            --shadow-medium: rgba(0, 0, 0, 0.1);
+            --border-radius-lg: 16px;
+            --border-radius-md: 10px;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark-gray);
+            background-color: var(--bg-cream);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-dark-gray);
+            line-height: 1.2;
+            margin-bottom: 0.5em;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--accent-deep-green);
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--primary-light-blue);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 28px;
+            border-radius: var(--border-radius-md);
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease-out;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background-image: linear-gradient(to right, var(--primary-light-blue) 0%, var(--primary-green) 100%);
+            color: var(--text-dark-gray);
+            box-shadow: 0 8px 15px var(--shadow-medium);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 20px var(--shadow-medium);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--accent-deep-green);
+            border: 2px solid var(--accent-deep-green);
+            box-shadow: none;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--accent-deep-green);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-ghost {
+            background-color: transparent;
+            color: var(--text-light-gray);
+        }
+
+        .btn-ghost:hover {
+            color: var(--accent-deep-green);
+            background-color: rgba(0,0,0,0.03);
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: transparent;
+            padding: 15px 0;
+            transition: all 0.3s ease-out;
+        }
+
+        .navbar.scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px var(--shadow-light);
+            backdrop-filter: blur(10px);
+            padding: 10px 0;
+        }
+
+        .navbar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-logo {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent-deep-green);
+        }
+
+        .navbar-logo span {
+            color: var(--primary-light-blue);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li a {
+            color: var(--text-light-gray);
+            margin-left: 30px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-links li a:hover {
+            color: var(--accent-deep-green);
+        }
+
+        .nav-links li a::after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background-color: var(--accent-deep-green);
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s ease-out;
+        }
+
+        .nav-links li a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            margin-left: 30px;
+        }
+
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .menu-toggle span {
+            height: 3px;
+            width: 25px;
+            background-color: var(--text-dark-gray);
+            margin-bottom: 5px;
+            border-radius: 2px;
+            transition: all 0.3s ease-out;
+        }
+
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            height: 100%;
+            background-color: var(--bg-cream);
+            box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+            flex-direction: column;
+            padding-top: 100px;
+            transition: right 0.4s ease-out;
+            z-index: 999;
+        }
+
+        .mobile-nav.open {
+            right: 0;
+        }
+
+        .mobile-nav ul {
+            list-style: none;
+            padding: 0 40px;
+        }
+
+        .mobile-nav ul li {
+            margin-bottom: 20px;
+        }
+
+        .mobile-nav ul li a {
+            color: var(--text-dark-gray);
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-light-blue) 0%, var(--primary-green) 100%);
+            color: var(--text-dark-gray);
+            padding: 120px 0;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1563637129525-4c0175b630b7?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+            background-attachment: fixed;
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+            animation: fadeInScale 1s ease-out forwards;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideUpFade 0.8s ease-out 0.2s forwards;
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideUpFade 0.8s ease-out 0.4s forwards;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideUpFade 0.8s ease-out 0.6s forwards;
+        }
+
+        /* General Section Styling */
+        section {
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        section.fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-heading {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--accent-deep-green);
+        }
+
+        .section-subheading {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--text-light-gray);
+            max-width: 700px;
+            margin: 0 auto 60px auto;
+        }
+
+        /* Our Promise */
+        .promise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .promise-item {
+            background-color: white;
+            padding: 40px;
+            border-radius: var(--border-radius-lg);
+            box-shadow: 0 5px 20px var(--shadow-light);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .promise-item:hover {
+            transform: translateY(-5px) scale(1.01);
+            box-shadow: 0 10px 30px var(--shadow-medium);
+        }
+
+        .promise-item i {
+            font-size: 3rem;
+            color: var(--primary-light-blue);
+            margin-bottom: 20px;
+        }
+
+        .promise-item h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        /* Featured Products */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: var(--border-radius-lg);
+            box-shadow: 0 5px 20px var(--shadow-light);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px) scale(1.01);
+            box-shadow: 0 10px 30px var(--shadow-medium);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .product-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .product-card-content {
+            padding: 25px;
+        }
+
+        .product-card h3 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .product-card .price {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--accent-deep-green);
+            margin-bottom: 15px;
+        }
+
+        /* Subscription Section */
+        .subscription-section {
+            background-color: var(--bg-light-blue);
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .subscription-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .subscription-content h2 {
+            color: var(--accent-deep-green);
+        }
+
+        .subscription-benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .benefit-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: var(--border-radius-lg);
+            box-shadow: 0 5px 20px var(--shadow-light);
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px) scale(1.01);
+            box-shadow: 0 10px 30px var(--shadow-medium);
+        }
+
+        .benefit-card i {
+            font-size: 2.5rem;
+            color: var(--primary-light-blue);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .benefit-card p {
+            color: var(--text-light-gray);
+        }
+
+        .subscription-cta-button {
+            margin-top: 50px;
+        }
+
+        /* Testimonials */
+        .testimonials-section {
+            background-color: var(--bg-light-green);
+        }
+
+        .testimonial-carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            gap: 30px;
+            padding-bottom: 20px;
+        }
+
+        .testimonial-card {
+            flex: 0 0 100%; /* For full width scrolling on small screens */
+            max-width: 450px; /* Adjust for larger screens */
+            scroll-snap-align: start;
+            background-color: white;
+            padding: 40px;
+            border-radius: var(--border-radius-lg);
+            box-shadow: 0 5px 20px var(--shadow-light);
+            text-align: center;
+            margin: 0 auto;
+        }
+        
+        @media (min-width: 768px) {
+            .testimonial-card {
+                flex: 0 0 calc(50% - 15px); /* Two cards per view */
+            }
+        }
+        @media (min-width: 1024px) {
+            .testimonial-card {
+                flex: 0 0 calc(33.333% - 20px); /* Three cards per view */
+            }
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: var(--text-light-gray);
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--accent-deep-green);
+        }
+
+        .testimonial-rating {
+            color: gold;
+            margin-bottom: 10px;
+        }
+
+        /* Blog/Recipes Section */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .blog-post-card {
+            background-color: white;
+            border-radius: var(--border-radius-lg);
+            box-shadow: 0 5px 20px var(--shadow-light);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .blog-post-card:hover {
+            transform: translateY(-5px) scale(1.01);
+            box-shadow: 0 10px 30px var(--shadow-medium);
+        }
+
+        .blog-post-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .blog-post-content {
+            padding: 25px;
+        }
+
+        .blog-post-content h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .blog-post-content p {
+            font-size: 0.95rem;
+            color: var(--text-light-gray);
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            color: var(--primary-light-blue);
+            font-weight: 500;
+        }
+
+        /* FAQ Section */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: white;
+            border-radius: var(--border-radius-md);
+            box-shadow: 0 2px 10px var(--shadow-light);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            background-color: var(--bg-cream);
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background-color: var(--bg-light-blue);
+        }
+
+        .faq-question i {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+            color: var(--text-light-gray);
+        }
+
+        .faq-answer.open {
+            max-height: 200px; /* Sufficiently large to cover content */
+            padding: 20px;
+        }
+        
+        .faq-answer p {
+            margin-bottom: 0;
+        }
+
+        /* Newsletter */
+        .newsletter-section {
+            background-color: var(--primary-light-blue);
+            color: var(--text-dark-gray);
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .newsletter-section h2 {
+            color: var(--text-dark-gray);
+        }
+
+        .newsletter-form {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .newsletter-form input[type="email"] {
+            flex-grow: 1;
+            padding: 15px 20px;
+            border: none;
+            border-radius: var(--border-radius-md);
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .newsletter-form .btn-primary {
+            padding: 15px 30px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--text-dark-gray);
+            color: #E0E0E0;
+            padding: 60px 0 20px 0;
+            font-size: 0.9rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #E0E0E0;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-light-blue);
+        }
+
+        .footer-social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .footer-social-icons a {
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .footer-social-icons a:hover {
+            color: var(--primary-light-blue);
+            transform: scale(1.1);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes slideUpFade {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .navbar-logo {
+                font-size: 1.6rem;
+            }
+            .nav-links {
+                display: none;
+            }
+            .nav-cta {
+                display: none;
+            }
+            .menu-toggle {
+                display: flex;
+            }
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+            .section-heading {
+                font-size: 2.5rem;
+            }
+            .newsletter-form {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .newsletter-form input[type="email"],
+            .newsletter-form .btn-primary {
+                width: 100%;
+            }
+            .footer-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar.scrolled {
+                padding: 8px 0;
+            }
+            .hero {
+                padding: 100px 0;
+            }
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            .hero-content p {
+                font-size: 1rem;
+                margin-bottom: 30px;
+            }
+            .hero-cta-group {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .btn {
+                width: 100%;
+                padding: 12px 20px;
+                font-size: 0.95rem;
+            }
+            section {
+                padding: 60px 0;
+            }
+            .section-heading {
+                font-size: 2rem;
+                margin-bottom: 15px;
+            }
+            .section-subheading {
+                font-size: 1rem;
+                margin-bottom: 40px;
+            }
+            .promise-item, .product-card, .benefit-card, .blog-post-card {
+                padding: 30px 20px;
+            }
+            .testimonial-card {
+                 flex: 0 0 100%;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .footer-social-icons {
+                justify-content: center;
+            }
+            .mobile-nav ul {
+                padding: 0 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            .navbar-logo {
+                font-size: 1.5rem;
+            }
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            .hero-content p {
+                font-size: 0.9rem;
+            }
+            .section-heading {
+                font-size: 1.8rem;
+            }
+            .promise-item i {
+                font-size: 2.5rem;
+            }
+            .promise-item h3 {
+                font-size: 1.3rem;
+            }
+            .product-card h3 {
+                font-size: 1.4rem;
+            }
+            .product-card .price {
+                font-size: 1.2rem;
+            }
+            .benefit-card i {
+                font-size: 2rem;
+            }
+            .benefit-card h3 {
+                font-size: 1.2rem;
+            }
+            .testimonial-card p {
+                font-size: 1rem;
+            }
+            .blog-post-content h3 {
+                font-size: 1.3rem;
+            }
+            .blog-post-content p {
+                font-size: 0.85rem;
+            }
+            .faq-question {
+                font-size: 1rem;
+                padding: 15px;
+            }
+            .faq-answer.open {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container navbar-content">
+            <a href="#hero" class="navbar-logo" aria-label="Lactalux Dairy Home">
+                Lacta<span>lux</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#subscriptions">Subscriptions</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#blog">Recipes</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-cta">
+                <a href="#shop" class="btn btn-primary">Shop Now <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+            <div class="menu-toggle" aria-label="Toggle mobile navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="mobile-nav">
+            <ul>
+                <li><a href="#shop" class="mobile-link">Shop</a></li>
+                <li><a href="#subscriptions" class="mobile-link">Subscriptions</a></li>
+                <li><a href="#about" class="mobile-link">About Us</a></li>
+                <li><a href="#blog" class="mobile-link">Recipes</a></li>
+                <li><a href="#contact" class="mobile-link">Contact</a></li>
+                <li><a href="#shop" class="btn btn-primary mobile-link">Shop Now</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="container hero-content">
+                <h1 role="heading" aria-level="1">Experience the Taste of True Freshness.</h1>
+                <p>Sourced from local farms, delivered to your door. Discover Lactalux Dairy's premium selection of wholesome milk and dairy products.</p>
+                <div class="hero-cta-group">
+                    <a href="#shop" class="btn btn-primary">Shop Fresh Dairy</a>
+                    <a href="#about" class="btn btn-secondary">Learn Our Story</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="promise" class="fade-in">
+            <div class="container">
+                <h2 class="section-heading">Our Promise: Purity, Quality, Freshness.</h2>
+                <p class="section-subheading">At Lactalux Dairy, we are committed to bringing you the finest dairy products, from our farm to your family's table.</p>
+                <div class="promise-grid">
+                    <div class="promise-item">
+                        <i class="fa-solid fa-leaf" aria-hidden="true"></i>
+                        <h3>Farm-Fresh Quality</h3>
+                        <p>Our milk comes from happy, healthy cows on local farms, ensuring the highest standards of quality and taste.</p>
+                    </div>
+                    <div class="promise-item">
+                        <i class="fa-solid fa-tractor" aria-hidden="true"></i>
+                        <h3>Sustainable Sourcing</h3>
+                        <p>We partner with farms that prioritize ethical practices and environmental stewardship for a healthier planet.</p>
+                    </div>
+                    <div class="promise-item">
+                        <i class="fa-solid fa-truck-fast" aria-hidden="true"></i>
+                        <h3>Convenient Delivery</h3>
+                        <p>Enjoy the freshest dairy products delivered right to your doorstep, on your schedule.</p>
+                    </div>
+                    <div class="promise-item">
+                        <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i>
+                        <h3>Diverse Product Range</h3>
+                        <p>From whole milk to artisan cheeses and yogurts, find all your dairy essentials and delights here.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="shop" class="fade-in">
+            <div class="container">
+                <h2 class="section-heading">Explore Our Premium Dairy Selection.</h2>
+                <p class="section-subheading">Handpicked for freshness and flavor, our range caters to every taste and need.</p>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1627485747372-f673322d6402?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="A glass bottle of fresh whole milk with a creamy texture." loading="lazy">
+                        <div class="product-card-content">
+                            <h3>Farmhouse Whole Milk</h3>
+                            <p class="price">$4.99 / Gallon</p>
+                            <a href="#" class="btn btn-primary">Add to Cart <i class="fa-solid fa-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1627485747761-1d54407b98d2?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="A glass bottle of organic skim milk, clear and light." loading="lazy">
+                        <div class="product-card-content">
+                            <h3>Organic Skim Milk</h3>
+                            <p class="price">$5.49 / Gallon</p>
+                            <a href="#" class="btn btn-primary">Add to Cart <i class="fa-solid fa-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1601672322588-b2a5b6f0e3f0?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="A container of rich, creamy Greek yogurt with fruit." loading="lazy">
+                        <div class="product-card-content">
+                            <h3>Creamy Greek Yogurt</h3>
+                            <p class="price">$3.79 / Tub</p>
+                            <a href="#" class="btn btn-primary">Add to Cart <i class="fa-solid fa-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1577782631720-3375836a5413?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="A block of artisanal butter on a wooden board." loading="lazy">
+                        <div class="product-card-content">
+                            <h3>Artisan Cultured Butter</h3>
+                            <p class="price">$6.29 / Block</p>
+                            <a href="#" class="btn btn-primary">Add to Cart <i class="fa-solid fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center" style="margin-top: 60px;">
+                    <a href="#" class="btn btn-secondary">View All Products <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="subscriptions" class="subscription-section fade-in">
+            <div class="container subscription-content">
+                <h2 class="section-heading">Never Run Out with Lactalux Subscriptions.</h2>
+                <p class="section-subheading">Enjoy the convenience of fresh dairy delivered automatically to your door with our flexible subscription plans.</p>
+                <div class="subscription-benefits-grid">
+                    <div class="benefit-card">
+                        <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+                        <h3>Flexible Schedules</h3>
+                        <p>Choose weekly, bi-weekly, or monthly deliveries that fit your lifestyle.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fa-solid fa-wallet" aria-hidden="true"></i>
+                        <h3>Save More</h3>
+                        <p>Subscribers receive exclusive discounts and special offers on all our products.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fa-solid fa-box-open" aria-hidden="true"></i>
+                        <h3>Customizable Orders</h3>
+                        <p>Easily modify your order, skip deliveries, or pause your subscription anytime.</p>
+                    </div>
+                </div>
+                <div class="subscription-cta-button">
+                    <a href="#" class="btn btn-primary btn-large">Discover Subscription Plans <i class="fa-solid fa-sack-dollar"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials-section fade-in">
+            <div class="container">
+                <h2 class="section-heading">What Our Customers Say.</h2>
+                <p class="section-subheading">Hear directly from families and individuals who choose Lactalux for their daily dairy needs.</p>
+                <div class="testimonial-carousel">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p>“Lactalux has transformed our morning routine! The milk is incredibly fresh and the delivery is always on time. A truly premium experience.”</p>
+                        <p class="testimonial-author">– Sarah P., Local Customer</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <p>“Finally, dairy I can trust. The organic milk is a game-changer for my family, and the yogurt is simply divine. Highly recommend!”</p>
+                        <p class="testimonial-author">– Mark T., Health Enthusiast</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p>“Exceptional quality and service. I love knowing exactly where my dairy comes from. Lactalux is now a staple in our home.”</p>
+                        <p class="testimonial-author">– Jessica L., Busy Parent</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <p>“The butter is a revelation! It makes everything taste better. And the convenience of delivery is unbeatable.”</p>
+                        <p class="testimonial-author">– David M., Home Chef</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="fade-in">
+            <div class="container">
+                <h2 class="section-heading">Fresh Ideas & Delicious Recipes.</h2>
+                <p class="section-subheading">Explore our blog for dairy-inspired recipes, farm stories, and health tips.</p>
+                <div class="blog-grid">
+                    <div class="blog-post-card">
+                        <img src="https://images.unsplash.com/photo-1546549005-4c07d3b51f89?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="A creamy risotto dish garnished with herbs." loading="lazy">
+                        <div class="blog-post-content">
+                            <h3>Creamy Risotto with Lactalux Milk</h3>
+                            <p>Master the art of a perfectly creamy risotto using our whole milk. This recipe is simple yet satisfying.</p>
+                            <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="blog-post-card">
+                        <img src="https://images.unsplash.com/photo-1563729781845-a74653e5e406?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="A smiling farmer standing in a green pasture with cows." loading="lazy">
+                        <div class="blog-post-content">
+                            <h3>Meet Our Farmers: The Heart of Lactalux</h3>
+                            <p>Discover the dedicated individuals and sustainable practices behind every drop of Lactalux Dairy.</p>
+                            <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="blog-post-card">
+                        <img src="https://images.unsplash.com/photo-1571407914848-d46487920786?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="A glass of milk and an apple, signifying healthy eating." loading="lazy">
+                        <div class="blog-post-content">
+                            <h3>The Surprising Health Benefits of Fresh Milk</h3>
+                            <p>Beyond calcium: explore the vitamins, minerals, and overall wellness fresh milk brings to your diet.</p>
+                            <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="fade-in">
+            <div class="container">
+                <h2 class="section-heading">Frequently Asked Questions.</h2>
+                <p class="section-subheading">Find quick answers to your most common questions about Lactalux Dairy products and services.</p>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question" tabindex="0" role="button" aria-expanded="false" aria-controls="faq-answer-1">
+                            What areas do you deliver to?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-1">
+                            <p>Currently, Lactalux Dairy delivers to major metropolitan areas within a 50-mile radius of our main farm. Please enter your zip code at checkout to confirm delivery to your location.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" tabindex="0" role="button" aria-expanded="false" aria-controls="faq-answer-2">
+                            Are your products organic?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-2">
+                            <p>Yes, many of our products, including a selection of our milk and yogurts, are certified organic. Look for the 'Organic' label on our product pages for specific details.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" tabindex="0" role="button" aria-expanded="false" aria-controls="faq-answer-3">
+                            How do I manage my subscription?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-3">
+                            <p>You can easily manage your subscription through your personal account dashboard. Here you can change your order, update delivery frequency, pause, or cancel your subscription at any time.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" tabindex="0" role="button" aria-expanded="false" aria-controls="faq-answer-4">
+                            What is your return policy?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-4">
+                            <p>Due to the perishable nature of our products, we do not accept returns. However, if you are unsatisfied with your order, please contact our customer support within 24 hours of delivery for assistance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter-section fade-in">
+            <div class="container">
+                <h2 class="section-heading">Stay Fresh with Lactalux Updates.</h2>
+                <p class="section-subheading">Join our newsletter for exclusive offers, new product announcements, and delicious recipes!</p>
+                <form class="newsletter-form">
+                    <label for="newsletter-email" class="sr-only">Enter your email address</label>
+                    <input type="email" id="newsletter-email" placeholder="Your email address" aria-label="Enter your email address for newsletter" required>
+                    <button type="submit" class="btn btn-primary">Subscribe <i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="#hero" class="navbar-logo" aria-label="Lactalux Dairy Home" style="color: white;">
+                    Lacta<span style="color: var(--primary-light-blue);">lux</span>
+                </a>
+                <p style="margin-top: 20px;">Pure Goodness, Delivered Fresh Daily.</p>
+                <div class="footer-social-icons">
+                    <a href="#" aria-label="Follow us on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Follow us on Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="Follow us on Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Follow us on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#shop">Shop All Products</a></li>
+                    <li><a href="#subscriptions">Subscription Plans</a></li>
+                    <li><a href="#about">Our Story</a></li>
+                    <li><a href="#blog">Blog & Recipes</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#">Delivery Information</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col" id="contact">
+                <h4>Contact Info</h4>
+                <p>123 Fresh Meadow Lane<br>Dairyville, CA 90210</p>
+                <p>Email: <a href="mailto:info@lactalux.com">info@lactalux.com</a></p>
+                <p>Phone: <a href="tel:+15551234567">(555) 123-4567</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Lactalux Dairy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Navbar scroll effect
+            const navbar = document.querySelector('.navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // Mobile menu toggle
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            menuToggle.addEventListener('click', () => {
+                mobileNav.classList.toggle('open');
+                menuToggle.classList.toggle('active'); // Optional: for burger icon animation
+                document.body.classList.toggle('no-scroll'); // Prevent scrolling when menu is open
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileNav.classList.remove('open');
+                    menuToggle.classList.remove('active');
+                    document.body.classList.remove('no-scroll');
+                });
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const offsetTop = targetElement.offsetTop - (navbar.offsetHeight + 10);
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Section fade-in on scroll
+            const faders = document.querySelectorAll('section');
+            const appearOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            };
+
+            const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    } else {
+                        entry.target.classList.add('fade-in');
+                        appearOnScroll.unobserve(entry.target);
+                    }
+                });
+            }, appearOptions);
+
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
+            });
+
+            // FAQ accordion functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const isActive = question.classList.contains('active');
+
+                    // Close all other open answers
+                    document.querySelectorAll('.faq-question.active').forEach(activeQuestion => {
+                        if (activeQuestion !== question) {
+                            activeQuestion.classList.remove('active');
+                            activeQuestion.nextElementSibling.classList.remove('open');
+                            activeQuestion.setAttribute('aria-expanded', 'false');
+                        }
+                    });
+
+                    // Toggle current answer
+                    question.classList.toggle('active');
+                    answer.classList.toggle('open');
+                    question.setAttribute('aria-expanded', !isActive);
+                });
+
+                // Keyboard accessibility for FAQ
+                question.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        question.click();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

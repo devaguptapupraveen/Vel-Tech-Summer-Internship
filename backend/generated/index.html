@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Petal & Bloom Co. | Exquisite Online Flower Delivery & Floral Design">
+    <meta name="description" content="Discover stunning bouquets, fresh plants, and custom floral arrangements from Petal & Bloom Co. We deliver artisan-crafted flowers for every occasion, straight to your door.">
+    <meta name="keywords" content="flower shop, online flowers, flower delivery, fresh bouquets, plants, custom floral, wedding flowers, event flowers, artisan flowers, buy flowers online, premium flowers, flower arrangements">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <link rel="canonical" href="https://www.petalandbloomco.com/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.petalandbloomco.com/">
+    <meta property="og:title" content="Petal & Bloom Co. | Exquisite Online Flower Delivery & Floral Design">
+    <meta property="og:description" content="Discover stunning bouquets, fresh plants, and custom floral arrangements from Petal & Bloom Co. We deliver artisan-crafted flowers for every occasion, straight to your door.">
+    <meta property="og:image" content="https://www.petalandbloomco.com/social-share.jpg"> <!-- Placeholder image URL -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.petalandbloomco.com/">
+    <meta property="twitter:title" content="Petal & Bloom Co. | Exquisite Online Flower Delivery & Floral Design">
+    <meta property="twitter:description" content="Discover stunning bouquets, fresh plants, and custom floral arrangements from Petal & Bloom Co. We deliver artisan-crafted flowers for every occasion, straight to your door.">
+    <meta property="twitter:image" content="https://www.petalandbloomco.com/social-share.jpg"> <!-- Placeholder image URL -->
+
+    <title>Petal & Bloom Co. | Exquisite Online Flower Delivery & Floral Design</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0V4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root {
+            --color-primary: #52796F; /* Sage Green */
+            --color-secondary: #D4B4E1; /* Muted Lavender */
+            --color-accent: #F7E9E3; /* Cream */
+            --color-text-dark: #2F3E46; /* Dark Charcoal */
+            --color-text-light: #FDFDFD;
+            --color-bg-light: #FDFDFD;
+            --color-bg-alt: #F7F7F7;
+        }
+
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Lora', serif; color: var(--color-text-dark); background-color: var(--color-bg-light); }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Outfit', sans-serif; color: var(--color-text-dark); }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--color-primary) 0%, #4a6a61 100%);
+            color: var(--color-text-light);
+            padding: 0.8rem 2rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            transform: scale(1);
+        }
+        .btn-primary:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 20px rgba(82, 121, 111, 0.4);
+        }
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: all 0.5s ease;
+            z-index: -1;
+        }
+        .btn-primary:hover::before { left: 100%; }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-primary);
+            border: 2px solid var(--color-primary);
+            padding: 0.8rem 2rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease-in-out;
+        }
+        .btn-secondary:hover {
+            background-color: var(--color-primary);
+            color: var(--color-text-light);
+            box-shadow: 0 4px 15px rgba(82, 121, 111, 0.2);
+        }
+
+        .card {
+            background-color: var(--color-bg-light);
+            border-radius: 1rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .navbar-sticky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: transparent;
+            transition: background-color 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+        }
+        .navbar-scrolled {
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .hero-bg {
+            background-image: url('https://images.unsplash.com/photo-1549727443-424a4f89d53c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(253, 253, 253, 0.8) 0%, rgba(253, 253, 253, 0.3) 50%, rgba(253, 253, 253, 0.0) 100%);
+        }
+        @media (min-width: 768px) {
+            .hero-overlay {
+                background: linear-gradient(to right, rgba(253, 253, 253, 0.8) 0%, rgba(253, 253, 253, 0.5) 50%, rgba(253, 253, 253, 0.0) 100%);
+            }
+        }
+
+        .section-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .section-reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--color-bg-alt);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--color-primary);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4a6a61;
+        }
+    </style>
+
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Petal & Bloom Co.",
+      "image": "https://www.petalandbloomco.com/logo.png",
+      "url": "https://www.petalandbloomco.com/",
+      "telephone": "+1-800-PETALCO",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Bloom Lane",
+        "addressLocality": "Garden City",
+        "addressRegion": "CA",
+        "postalCode": "90210",
+        "addressCountry": "US"
+      },
+      "priceRange": "$$",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Saturday"
+          ],
+          "opens": "10:00",
+          "closes": "17:00"
+        }
+      ]
+    }
+    </script>
+
+</head>
+<body class="antialiased leading-relaxed">
+
+    <!-- Navbar -->
+    <header class="navbar-sticky py-4 md:py-6" id="navbar">
+        <nav class="container mx-auto flex justify-between items-center px-6">
+            <a href="#hero" class="text-2xl font-bold tracking-tight text-current focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-var(--color-primary)" aria-label="Petal & Bloom Co. Home">
+                <span class="text-var(--color-primary)">Petal</span><span class="text-var(--color-text-dark)"> & Bloom Co.</span>
+            </a>
+
+            <div class="hidden md:flex items-center space-x-8 lg:space-x-12" role="navigation" aria-label="Main navigation">
+                <a href="#shop" class="text-var(--color-text-dark) hover:text-var(--color-primary) font-medium text-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-var(--color-primary)">Shop</a>
+                <a href="#custom-orders" class="text-var(--color-text-dark) hover:text-var(--color-primary) font-medium text-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-var(--color-primary)">Custom Orders</a>
+                <a href="#about" class="text-var(--color-text-dark) hover:text-var(--color-primary) font-medium text-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-var(--color-primary)">About Us</a>
+                <a href="#contact" class="text-var(--color-text-dark) hover:text-var(--color-primary) font-medium text-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-var(--color-primary)">Contact</a>
+                <a href="#cart" class="relative text-var(--color-text-dark) hover:text-var(--color-primary) transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-var(--color-primary)" aria-label="Shopping Cart">
+                    <i class="fas fa-shopping-cart text-xl"></i>
+                    <span class="absolute -top-2 -right-2 bg-var(--color-primary) text-white text-xs rounded-full h-5 w-5 flex items-center justify-center" aria-live="polite" aria-atomic="true">0</span>
+                </a>
+                <button class="btn-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-var(--color-primary)" aria-label="My Account">My Account</button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden flex items-center">
+                <a href="#cart" class="relative text-var(--color-text-dark) hover:text-var(--color-primary) mr-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-var(--color-primary)" aria-label="Shopping Cart">
+                    <i class="fas fa-shopping-cart text-xl"></i>
+                    <span class="absolute -top-2 -right-2 bg-var(--color-primary) text-white text-xs rounded-full h-5 w-5 flex items-center justify-center" aria-live="polite" aria-atomic="true">0</span>
+                </a>
+                <button id="mobile-menu-button" class="text-var(--color-text-dark) focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-var(--color-primary)" aria-label="Open mobile menu" aria-expanded="false">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden absolute top-full left-0 w-full bg-white bg-opacity-95 backdrop-filter backdrop-blur-lg shadow-lg py-4 transform -translate-y-full opacity-0 transition-all duration-300 ease-in-out" role="navigation" aria-hidden="true">
+            <div class="flex flex-col items-center space-y-4">
+                <a href="#shop" class="text-var(--color-text-dark) hover:text-var(--color-primary) font-medium text-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-var(--color-primary)">Shop</a>
+                <a href="#custom-orders" class="text-var(--color-text-dark) hover:text-var(--color-primary) font-medium text-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-var(--color-primary)">Custom Orders</a>
+                <a href="#about" class="text-var(--color-text-dark) hover:text-var(--color-primary) font-medium text-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-var(--color-primary)">About Us</a>
+                <a href="#contact" class="text-var(--color-text-dark) hover:text-var(--color-primary) font-medium text-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-var(--color-primary)">Contact</a>
+                <button class="btn-primary w-4/5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-var(--color-primary)">My Account</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-bg relative h-screen flex items-center justify-center py-20 lg:py-0 text-center text-var(--color-text-dark)" role="banner">
+            <div class="hero-overlay"></div>
+            <div class="container mx-auto px-6 relative z-10 animate-fade-in-up">
+                <h1 class="text-5xl md:text-7xl font-extrabold mb-4 leading-tight section-reveal" data-delay="0.1">
+                    Crafting Moments with Nature's Finest
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto section-reveal" data-delay="0.2">
+                    Exquisite floral designs for every occasion, delivered with care and artistry.
+                </p>
+                <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6 section-reveal" data-delay="0.3">
+                    <a href="#shop" class="btn-primary text-xl font-semibold inline-flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-var(--color-primary)">
+                        Shop Bouquets <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="#custom-orders" class="btn-secondary text-xl font-semibold inline-flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-var(--color-primary)">
+                        Custom Orders
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Collections -->
+        <section id="shop" class="py-16 md:py-24 bg-var(--color-bg-alt)">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-var(--color-text-dark) section-reveal">The Season's Best</h2>
+                <p class="text-lg text-center max-w-2xl mx-auto mb-16 text-var(--color-text-dark) section-reveal" data-delay="0.1">
+                    Hand-picked and artfully arranged, our featured collections capture the essence of the season, perfect for any special moment.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Product Card 1 -->
+                    <article class="card overflow-hidden group section-reveal" data-delay="0.2">
+                        <img src="https://images.unsplash.com/photo-1587847926941-e047ce576579?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Sunrise Serenade Bouquet" class="w-full h-64 object-cover object-center transition-transform duration-300 group-hover:scale-105" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold mb-2 text-var(--color-text-dark)">Sunrise Serenade</h3>
+                            <p class="text-var(--color-text-dark) text-opacity-80 mb-4">A vibrant mix of orange roses, yellow lilies, and fresh greenery.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-var(--color-primary)">$79.00</span>
+                                <a href="/product/sunrise-serenade" class="btn-secondary text-base py-2 px-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-var(--color-primary)">View Details</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product Card 2 -->
+                    <article class="card overflow-hidden group section-reveal" data-delay="0.3">
+                        <img src="https://images.unsplash.com/photo-1547842790-a54f8b96495b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Velvet Bloom Bouquet" class="w-full h-64 object-cover object-center transition-transform duration-300 group-hover:scale-105" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold mb-2 text-var(--color-text-dark)">Velvet Bloom</h3>
+                            <p class="text-var(--color-text-dark) text-opacity-80 mb-4">Deep red roses, purple ranunculus, and eucalyptus for a luxurious feel.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-var(--color-primary)">$95.00</span>
+                                <a href="/product/velvet-bloom" class="btn-secondary text-base py-2 px-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-var(--color-primary)">View Details</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product Card 3 -->
+                    <article class="card overflow-hidden group section-reveal" data-delay="0.4">
+                        <img src="https://images.unsplash.com/photo-1588667355099-0a2569f65c69?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Forest Whisper Plant" class="w-full h-64 object-cover object-center transition-transform duration-300 group-hover:scale-105" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold mb-2 text-var(--color-text-dark)">Forest Whisper Plant</h3>
+                            <p class="text-var(--color-text-dark) text-opacity-80 mb-4">A serene collection of lush green plants in a rustic ceramic pot.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-var(--color-primary)">$55.00</span>
+                                <a href="/product/forest-whisper" class="btn-secondary text-base py-2 px-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-var(--color-primary)">View Details</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="text-center mt-16 section-reveal" data-delay="0.5">
+                    <a href="/shop" class="btn-primary text-xl font-semibold inline-flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-var(--color-primary)">
+                        Explore All Flowers <i class="fas fa-leaf ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shop by Occasion -->
+        <section class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-var(--color-text-dark) section-reveal">Shop by Occasion</h2>
+                <p class="text-lg text-center max-w-2xl mx-auto mb-16 text-var(--color-text-dark) section-reveal" data-delay="0.1">
+                    Find the perfect arrangement to celebrate every milestone, express sympathy, or simply brighten someone's day.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <a href="/shop/birthdays" class="card overflow-hidden text-center group section-reveal" data-delay="0.2" aria-label="Shop for Birthdays">
+                        <img src="https://images.unsplash.com/photo-1518608889980-360e227a6962?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=60" alt="Birthday flowers" class="w-full h-48 object-cover object-center transition-transform duration-300 group-hover:scale-105" loading="lazy">
+                        <h3 class="text-2xl font-semibold mt-4 mb-2 text-var(--color-text-dark) group-hover:text-var(--color-primary) transition-colors">Birthdays</h3>
+                        <p class="text-var(--color-text-dark) text-opacity-80 p-4">Joyful blooms to make their day extra special.</p>
+                    </a>
+                    <a href="/shop/anniversaries" class="card overflow-hidden text-center group section-reveal" data-delay="0.3" aria-label="Shop for Anniversaries">
+                        <img src="https://images.unsplash.com/photo-1522036647903-b7ca0612c6a4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=60" alt="Anniversary flowers" class="w-full h-48 object-cover object-center transition-transform duration-300 group-hover:scale-105" loading="lazy">
+                        <h3 class="text-2xl font-semibold mt-4 mb-2 text-var(--color-text-dark) group-hover:text-var(--color-primary) transition-colors">Anniversaries</h3>
+                        <p class="text-var(--color-text-dark) text-opacity-80 p-4">Celebrate lasting love with elegant arrangements.</p>
+                    </a>
+                    <a href="/shop/sympathy" class="card overflow-hidden text-center group section-reveal" data-delay="0.4" aria-label="Shop for Sympathy">
+                        <img src="https://images.unsplash.com/photo-1544498595-5f21287c8a32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=60" alt="Sympathy flowers" class="w-full h-48 object-cover object-center transition-transform duration-300 group-hover:scale-105" loading="lazy">
+                        <h3 class="text-2xl font-semibold mt-4 mb-2 text-var(--color-text-dark) group-hover:text-var(--color-primary) transition-colors">Sympathy</h3>
+                        <p class="text-var(--color-text-dark) text-opacity-80 p-4">Thoughtful tributes for moments of remembrance.</p>
+                    </a>
+                    <a href="/shop/just-because" class="card overflow-hidden text-center group section-reveal" data-delay="0.5" aria-label="Shop 'Just Because' flowers">
+                        <img src="https://images.unsplash.com/photo-1628186103328-98e9803362a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=60" alt="Just Because flowers" class="w-full h-48 object-cover object-center transition-transform duration-300 group-hover:scale-105" loading="lazy">
+                        <h3 class="text-2xl font-semibold mt-4 mb-2 text-var(--color-text-dark) group-hover:text-var(--color-primary) transition-colors">Just Because</h3>
+                        <p class="text-var(--color-text-dark) text-opacity-80 p-4">A spontaneous gesture to brighten any day.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="py-16 md:py-24 bg-var(--color-bg-light) text-var(--color-text-dark)">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 section-reveal">Why Choose Petal & Bloom Co.?</h2>
+                <p class="text-lg text-center max-w-2xl mx-auto mb-16 section-reveal" data-delay="0.1">
+                    We believe every bouquet tells a story. Experience the difference of dedicated craftsmanship and genuine care.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center section-reveal" data-delay="0.2">
+                        <div class="text-var(--color-primary) text-6xl mb-6"><i class="fas fa-seedling"></i></div>
+                        <h3 class="text-2xl font-semibold mb-3">Artisan Craftsmanship</h3>
+                        <p class="text-lg text-var(--color-text-dark) text-opacity-90">Each arrangement is handcrafted by skilled florists with a passion for beauty and design.</p>
+                    </div>
+                    <div class="text-center section-reveal" data-delay="0.3">
+                        <div class="text-var(--color-primary) text-6xl mb-6"><i class="fas fa-leaf"></i></div>
+                        <h3 class="text-2xl font-semibold mb-3">Sustainable Sourcing</h3>
+                        <p class="text-lg text-var(--color-text-dark) text-opacity-90">We partner with local growers and ethical farms to ensure the freshest, most eco-friendly blooms.</p>
+                    </div>
+                    <div class="text-center section-reveal" data-delay="0.4">
+                        <div class="text-var(--color-primary) text-6xl mb-6"><i class="fas fa-truck-fast"></i></div>
+                        <h3 class="text-2xl font-semibold mb-3">Prompt, Reliable Delivery</h3>
+                        <p class="text-lg text-var(--color-text-dark) text-opacity-90">Your thoughtful gift arrives on time, every time, beautifully presented and handled with care.</p>
+                    </div>
+                    <div class="text-center section-reveal" data-delay="0.5">
+                        <div class="text-var(--color-primary) text-6xl mb-6"><i class="fas fa-heart"></i></div>
+                        <h3 class="text-2xl font-semibold mb-3">Personal Touch</h3>
+                        <p class="text-lg text-var(--color-text-dark) text-opacity-90">Add a personalized message card and select from our curated add-ons for a truly unique gift.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="py-16 md:py-24 bg-var(--color-accent) text-var(--color-text-dark)">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 section-reveal">What Our Customers Say</h2>
+                <div class="relative max-w-4xl mx-auto" aria-live="polite" aria-atomic="true">
+                    <div id="testimonial-carousel" class="overflow-hidden">
+                        <div class="flex transition-transform duration-500 ease-in-out" id="testimonial-track">
+                            <!-- Testimonial 1 -->
+                            <div class="flex-none w-full p-8 text-center section-reveal card mx-4">
+                                <p class="text-xl md:text-2xl italic mb-6">"Absolutely stunning! The bouquet exceeded all expectations and brought so much joy. The delivery was seamless, and the flowers lasted beautifully."</p>
+                                <p class="font-semibold text-lg">&mdash; Sarah L., San Francisco</p>
+                            </div>
+                            <!-- Testimonial 2 -->
+                            <div class="flex-none w-full p-8 text-center section-reveal card mx-4">
+                                <p class="text-xl md:text-2xl italic mb-6">"Petal & Bloom Co. made our wedding day unforgettable with their breathtaking floral arrangements. Truly artistic and professional service from start to finish."</p>
+                                <p class="font-semibold text-lg">&mdash; Emily & David P., Los Angeles</p>
+                            </div>
+                            <!-- Testimonial 3 -->
+                            <div class="flex-none w-full p-8 text-center section-reveal card mx-4">
+                                <p class="text-xl md:text-2xl italic mb-6">"I'm a loyal customer! Their unique plant selection is incredible, and the customer service is always warm and helpful. My home feels so much fresher."</p>
+                                <p class="font-semibold text-lg">&mdash; Mark T., Seattle</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button aria-label="Previous testimonial" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-var(--color-primary) text-white p-3 rounded-full shadow-lg hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-var(--color-accent) focus:ring-var(--color-primary) transition-colors duration-200" id="prev-testimonial">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button aria-label="Next testimonial" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-var(--color-primary) text-white p-3 rounded-full shadow-lg hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-var(--color-accent) focus:ring-var(--color-primary) transition-colors duration-200" id="next-testimonial">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Custom Orders / Weddings & Events -->
+        <section id="custom-orders" class="py-16 md:py-24 bg-var(--color-bg-light) text-var(--color-text-dark)">
+            <div class="container mx-auto px-6">
+                <div class="lg:flex lg:items-center lg:space-x-12">
+                    <div class="lg:w-1/2 mb-10 lg:mb-0 section-reveal">
+                        <img src="https://images.unsplash.com/photo-1594957635905-27a3c75d4f10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Wedding floral arrangement" class="rounded-2xl shadow-xl w-full h-96 object-cover" loading="lazy">
+                    </div>
+                    <div class="lg:w-1/2 section-reveal" data-delay="0.1">
+                        <h2 class="text-4xl md:text-5xl font-bold mb-6">Your Vision, Our Blooms</h2>
+                        <p class="text-xl mb-8 text-var(--color-text-dark) text-opacity-90">
+                            For life's grandest celebrations and most intimate gatherings, Petal & Bloom Co. offers bespoke floral design services. From elegant weddings to corporate events, our expert florists will bring your vision to life with personalized artistry and meticulous attention to detail.
+                        </p>
+                        <a href="/custom-inquiry" class="btn-primary text-xl font-semibold inline-flex items-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-var(--color-primary)">
+                            Inquire About Custom Design <i class="fas fa-envelope ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Signup -->
+        <section class="py-16 md:py-24 bg-var(--color-primary) text-var(--color-text-light)">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 section-reveal">Bloom with Us</h2>
+                <p class="text-xl mb-10 max-w-2xl mx-auto section-reveal" data-delay="0.1">
+                    Join our newsletter for exclusive offers, seasonal updates, and floral inspiration delivered right to your inbox.
+                </p>
+                <form class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4 max-w-xl mx-auto section-reveal" data-delay="0.2">
+                    <label for="email-newsletter" class="sr-only">Email Address</label>
+                    <input type="email" id="email-newsletter" name="email" placeholder="Enter your email address" aria-label="Enter your email address for newsletter" class="w-full md:w-auto flex-grow p-4 rounded-lg bg-white text-var(--color-text-dark) placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-var(--color-secondary)">
+                    <button type="submit" class="btn-secondary text-lg font-semibold w-full md:w-auto bg-var(--color-secondary) border-var(--color-secondary) text-var(--color-text-dark) hover:bg-var(--color-text-dark) hover:text-var(--color-text-light) focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-var(--color-primary) focus:ring-var(--color-secondary)">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </section>
+
+         <!-- About Us -->
+        <section id="about" class="py-16 md:py-24 bg-var(--color-bg-light) text-var(--color-text-dark)">
+            <div class="container mx-auto px-6">
+                <div class="lg:flex lg:items-center lg:space-x-12 flex-row-reverse">
+                    <div class="lg:w-1/2 mb-10 lg:mb-0 section-reveal">
+                        <img src="https://images.unsplash.com/photo-1596765793441-2c091937ff0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Florist arranging flowers" class="rounded-2xl shadow-xl w-full h-96 object-cover" loading="lazy">
+                    </div>
+                    <div class="lg:w-1/2 section-reveal" data-delay="0.1">
+                        <h2 class="text-4xl md:text-5xl font-bold mb-6">Our Story: Passion in Every Petal</h2>
+                        <p class="text-xl mb-4 text-var(--color-text-dark) text-opacity-90">
+                            Founded by a team of passionate florists, Petal & Bloom Co. was born from a desire to bring unparalleled beauty and artistry to every floral creation. We believe flowers are more than just gifts; they are expressions, memories, and reflections of nature's exquisite charm.
+                        </p>
+                        <p class="text-xl text-var(--color-text-dark) text-opacity-90">
+                            From our carefully selected growers to the delicate arrangement in our studio, every step is infused with dedication to quality and sustainability. We invite you to experience the Petal & Bloom Co. difference.
+                        </p>
+                        <a href="/our-values" class="btn-secondary text-lg font-semibold inline-flex items-center mt-8 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-var(--color-primary)">
+                            Learn More About Us <i class="fas fa-book-open ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us -->
+        <section id="contact" class="py-16 md:py-24 bg-var(--color-bg-alt)">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-var(--color-text-dark) section-reveal">Get in Touch</h2>
+                <p class="text-lg text-center max-w-2xl mx-auto mb-16 text-var(--color-text-dark) section-opacity-90 section-reveal" data-delay="0.1">
+                    Have a question, need assistance with an order, or looking for something truly unique? Our team is here to help.
+                </p>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div class="space-y-8 section-reveal" data-delay="0.2">
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-3 text-var(--color-text-dark)">Contact Information</h3>
+                            <p class="text-lg"><i class="fas fa-phone-alt text-var(--color-primary) mr-3"></i> (800) 738-2526</p>
+                            <p class="text-lg"><i class="fas fa-envelope text-var(--color-primary) mr-3"></i> hello@petalandbloomco.com</p>
+                            <p class="text-lg"><i class="fas fa-map-marker-alt text-var(--color-primary) mr-3"></i> 123 Bloom Lane, Garden City, CA 90210</p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-3 text-var(--color-text-dark)">Opening Hours</h3>
+                            <p class="text-lg">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                            <p class="text-lg">Saturday: 10:00 AM - 5:00 PM</p>
+                            <p class="text-lg">Sunday: Closed</p>
+                        </div>
+                        <div class="mt-8">
+                            <h3 class="text-2xl font-semibold mb-3 text-var(--color-text-dark)">Find Us</h3>
+                            <div class="h-64 bg-gray-300 rounded-lg overflow-hidden shadow-md" aria-label="Our location on Google Maps">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.698305007425!2d-118.40939518478474!3d34.05223428060855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bc04d602a6b3%3A0x6a0c0b8b2e5a420!2sBeverly%20Hills%2C%20CA!5e0!3m2!1sen!2sus!4v1678912345678!5m2!1sen!2sus"
+                                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Our Location">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-reveal" data-delay="0.3">
+                        <h3 class="text-2xl font-semibold mb-6 text-var(--color-text-dark)">Send Us a Message</h3>
+                        <form class="space-y-6">
+                            <div>
+                                <label for="contact-name" class="block text-lg font-medium mb-2">Name</label>
+                                <input type="text" id="contact-name" name="name" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-var(--color-primary)" placeholder="Your Name" aria-required="true">
+                            </div>
+                            <div>
+                                <label for="contact-email" class="block text-lg font-medium mb-2">Email</label>
+                                <input type="email" id="contact-email" name="email" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-var(--color-primary)" placeholder="your@email.com" aria-required="true">
+                            </div>
+                            <div>
+                                <label for="contact-subject" class="block text-lg font-medium mb-2">Subject</label>
+                                <input type="text" id="contact-subject" name="subject" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-var(--color-primary)" placeholder="Subject of your message" aria-required="true">
+                            </div>
+                            <div>
+                                <label for="contact-message" class="block text-lg font-medium mb-2">Message</label>
+                                <textarea id="contact-message" name="message" rows="6" class="w-full p-4 border border-gray-300 rounded-lg resize-y focus:outline-none focus:ring-2 focus:ring-var(--color-primary)" placeholder="How can we help you?" aria-required="true"></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary text-xl font-semibold w-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-var(--color-primary)">
+                                Send Message <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-var(--color-text-dark) text-var(--color-text-light) py-16 md:py-20">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+            <div class="space-y-4">
+                <a href="#hero" class="text-3xl font-bold tracking-tight text-current focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-var(--color-text-dark) focus:ring-var(--color-primary)" aria-label="Petal & Bloom Co. Home">
+                    <span class="text-var(--color-primary)">Petal</span><span class="text-var(--color-text-light)"> & Bloom Co.</span>
+                </a>
+                <p class="text-var(--color-text-light) text-opacity-80">Exquisite floral designs for every occasion, delivered with care and artistry.</p>
+                <div class="flex space-x-4 mt-6">
+                    <a href="#" class="text-var(--color-text-light) hover:text-var(--color-primary) text-2xl transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-var(--color-text-dark) focus:ring-var(--color-primary)" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-var(--color-text-light) hover:text-var(--color-primary) text-2xl transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-var(--color-text-dark) focus:ring-var(--color-primary)" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-var(--color-text-light) hover:text-var(--color-primary) text-2xl transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-var(--color-text-dark) focus:ring-var(--color-primary)" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-semibold mb-6 text-var(--color-primary)">Quick Links</h3>
+                <ul class="space-y-3">
+                    <li><a href="#shop" class="text-var(--color-text-light) text-opacity-80 hover:text-var(--color-primary) transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-var(--color-text-dark) focus:ring-var(--color-primary)">Shop All</a></li>
+                    <li><a href="#custom-orders" class="text-var(--color-text-light) text-opacity-80 hover:text-var(--color-primary) transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-var(--color-text-dark) focus:ring-var(--color-primary)">Custom Designs</a></li>
+                    <li><a href="#about" class="text-var(--color-text-light) text-opacity-80 hover:text-var(--color-primary) transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-var(--color-text-dark) focus:ring-var(--color-primary)">Our Story</a></li>
+                    <li><a href="/blog" class="text-var(--color-text-light) text-opacity-80 hover:text-var(--color-primary) transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-var(--color-text-dark) focus:ring-var(--color-primary)">Floral Journal</a></li>
+                    <li><a href="/faq" class="text-var(--color-text-light) text-opacity-80 hover:text-var(--color-primary) transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-var(--color-text-dark) focus:ring-var(--color-primary)">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-semibold mb-6 text-var(--color-primary)">Support</h3>
+                <ul class="space-y-3">
+                    <li><a href="#contact" class="text-var(--color-text-light) text-opacity-80 hover:text-var(--color-primary) transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-var(--color-text-dark) focus:ring-var(--color-primary)">Contact Us</a></li>
+                    <li><a href="/delivery-info" class="text-var(--color-text-light) text-opacity-80 hover:text-var(--color-primary) transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-var(--color-text-dark) focus:ring-var(--color-primary)">Delivery Information</a></li>
+                    <li><a href="/privacy-policy" class="text-var(--color-text-light) text-opacity-80 hover:text-var(--color-primary) transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-var(--color-text-dark) focus:ring-var(--color-primary)">Privacy Policy</a></li>
+                    <li><a href="/terms-of-service" class="text-var(--color-text-light) text-opacity-80 hover:text-var(--color-primary) transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-var(--color-text-dark) focus:ring-var(--color-primary)">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-semibold mb-6 text-var(--color-primary)">Contact Us</h3>
+                <p class="text-var(--color-text-light) text-opacity-80 mb-3"><i class="fas fa-map-marker-alt mr-2 text-var(--color-primary)"></i> 123 Bloom Lane, Garden City, CA 90210</p>
+                <p class="text-var(--color-text-light) text-opacity-80 mb-3"><i class="fas fa-phone-alt mr-2 text-var(--color-primary)"></i> (800) 738-2526</p>
+                <p class="text-var(--color-text-light) text-opacity-80 mb-3"><i class="fas fa-envelope mr-2 text-var(--color-primary)"></i> hello@petalandbloomco.com</p>
+            </div>
+        </div>
+        <div class="container mx-auto px-6 border-t border-gray-700 mt-12 pt-8 text-center">
+            <p class="text-var(--color-text-light) text-opacity-70">&copy; 2024 Petal & Bloom Co. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+
+        // Mobile Menu Toggle
+        mobileMenuButton.addEventListener('click', () => {
+            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+            if (mobileMenu.classList.contains('-translate-y-full')) {
+                mobileMenu.classList.remove('-translate-y-full', 'opacity-0');
+                mobileMenu.classList.add('translate-y-0', 'opacity-100');
+                mobileMenu.setAttribute('aria-hidden', 'false');
+            } else {
+                mobileMenu.classList.add('-translate-y-full', 'opacity-0');
+                mobileMenu.classList.remove('translate-y-0', 'opacity-100');
+                mobileMenu.setAttribute('aria-hidden', 'true');
+            }
+        });
+
+        // Section Reveal on Scroll
+        const sectionObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const delay = parseFloat(entry.target.dataset.delay) || 0;
+                    setTimeout(() => {
+                        entry.target.classList.add('is-visible');
+                    }, delay * 1000); // Convert seconds to milliseconds
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.section-reveal').forEach(section => {
+            sectionObserver.observe(section);
+        });
+
+        // Testimonial Carousel
+        const testimonialTrack = document.getElementById('testimonial-track');
+        const prevButton = document.getElementById('prev-testimonial');
+        const nextButton = document.getElementById('next-testimonial');
+        let currentIndex = 0;
+        const testimonials = testimonialTrack.children;
+        const totalTestimonials = testimonials.length;
+
+        function updateCarousel() {
+            const width = testimonials[0].clientWidth + 32; // card width + mx-4 (16px * 2)
+            testimonialTrack.style.transform = `translateX(-${currentIndex * width}px)`;
+        }
+
+        function goToNext() {
+            currentIndex = (currentIndex + 1) % totalTestimonials;
+            updateCarousel();
+        }
+
+        function goToPrev() {
+            currentIndex = (currentIndex - 1 + totalTestimonials) % totalTestimonials;
+            updateCarousel();
+        }
+
+        nextButton.addEventListener('click', goToNext);
+        prevButton.addEventListener('click', goToPrev);
+
+        // Auto-advance carousel
+        let autoAdvance = setInterval(goToNext, 5000);
+
+        // Pause on hover
+        testimonialTrack.addEventListener('mouseover', () => clearInterval(autoAdvance));
+        testimonialTrack.addEventListener('mouseleave', () => autoAdvance = setInterval(goToNext, 5000));
+
+        // Adjust carousel on resize
+        window.addEventListener('resize', updateCarousel);
+        updateCarousel(); // Initial call to set correct position
+
+    </script>
+</body>
+</html>
